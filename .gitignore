@@ -1,0 +1,32 @@
+__pycache__/
+*.pyc
+
+# Ignore all files in data/
+data/
+
+
+
+# Ignore Python site-packages
+abids/Lib/site-packages/
+
+# Ignore scipy test data
+abids/Lib/site-packages/scipy/io/tests/data/
+abids/Lib/site-packages/scipy/linalg/tests/data/
+abids/Lib/site-packages/scipy/ndimage/tests/data/
+abids/Lib/site-packages/scipy/sparse/tests/data/
+abids/Lib/site-packages/scipy/spatial/tests/data/
+abids/Lib/site-packages/scipy/special/tests/data/
+abids/Lib/site-packages/scipy/stats/tests/data/
+
+# Ignore sklearn datasets/test data
+abids/Lib/site-packages/sklearn/datasets/data/
+abids/Lib/site-packages/sklearn/datasets/tests/data/
+abids/Lib/site-packages/sklearn/datasets/tests/data/openml/
+abids/Lib/site-packages/sklearn/datasets/tests/data/openml/id_*/ 
+# (You can use wildcards for specific folders)
+
+# Ignore tzdata zoneinfo data
+abids/Lib/site-packages/tzdata/zoneinfo/
+
+# Ignore other large or generated data
+# (add any other directories or files you want to exclude)

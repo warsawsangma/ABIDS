@@ -1,0 +1,56 @@
+# src/config.yaml
+#Data paths
+raw_data_path: "../data/raw/network_traffic_data.csv"
+processed_data_path: "../data/processed/processed_data.pkl"
+
+
+# Model save paths
+rf_model_path: "../models/rf_model.pkl"
+iso_forest_model_path: "../models/isolation_forest.pkl"
+svm_model_path: "../models/one_class_svm.pkl"  # Added path for One-Class SVM
+scaler_path: "../models/scaler.pkl"
+pca_path: "../models/pca.pkl" # <-- added for PCA
+
+#test data path
+test_data_path: '../data/test_data.pkl'
+# Features to use
+features:
+  - Flow Duration
+  - Total Fwd Packet
+  - Total Bwd packets
+  - Total Length of Fwd Packet
+  - Total Length of Bwd Packet
+  - Fwd Packet Length Max
+  - Fwd Packet Length Min
+  - Fwd Packet Length Mean
+  - Fwd Packet Length Std
+  - Bwd Packet Length Max
+  - Bwd Packet Length Min
+  - Bwd Packet Length Mean
+  - Bwd Packet Length Std
+  - Flow Bytes/s
+  - Flow Packets/s
+  - Flow IAT Mean
+  - Flow IAT Std
+  - Flow IAT Max
+  - Flow IAT Min
+  - Fwd IAT Total
+  - Fwd IAT Mean
+  - Fwd IAT Std
+  - Fwd IAT Max
+  - Fwd IAT Min
+  - Bwd IAT Total
+  - Bwd IAT Mean
+  - Bwd IAT Std
+  - Bwd IAT Max
+  - Bwd IAT Min
+  - Packet Length Min
+  - Packet Length Max
+  - Packet Length Mean
+  - Packet Length Std
+  # Additional features from second data type
+  - cpu_usage
+  - memory_usage
+  - network_traffic_in
+  - network_traffic_out
+  - error_rate

@@ -1,0 +1,6 @@
+scikit-learn
+pandas
+pyyaml
+numpy
+joblib
+pytest  # for testing
