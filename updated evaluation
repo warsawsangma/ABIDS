@@ -1,0 +1,36 @@
+import numpy as np
+from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
+
+def evaluate_model(y_true_labels, y_pred_labels, model_name):
+    # Convert inputs to numpy arrays if they aren't already
+    y_true_labels = np.array(y_true_labels).reshape(-1)
+    y_pred_labels = np.array(y_pred_labels).reshape(-1)
+
+    if y_true_labels.shape != y_pred_labels.shape:
+        print("Error: Input arrays have different shapes.")
+        return None
+
+    # Continue with evaluation
+    cm = confusion_matrix(y_true_labels, y_pred_labels)
+    accuracy = accuracy_score(y_true_labels, y_pred_labels)
+    precision = precision_score(y_true_labels, y_pred_labels, pos_label=1)
+    recall = recall_score(y_true_labels, y_pred_labels, pos_label=1)
+    f1 = f1_score(y_true_labels, y_pred_labels, pos_label=1)
+
+    # Print or log results
+    print(f"\nEvaluation Results for {model_name}:")
+    print(f"Confusion Matrix:\n{cm}")
+    print(f"Accuracy: {accuracy:.4f}")
+    print(f"Precision: {precision:.4f}")
+    print(f"Recall: {recall:.4f}")
+    print(f"F1-score: {f1:.4f}")
+
+    return {
+        'model': model_name,
+        'accuracy': accuracy,
+        'precision': precision,
+        'recall': recall,
+        'f1': f1,
+        'confusion_matrix': cm
+    }
+
